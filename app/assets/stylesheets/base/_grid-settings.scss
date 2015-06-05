@@ -1,0 +1,19 @@
+$susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+  container: em(1200),
+  global-box-sizing: border-box,
+);
+
+@include border-box-sizing;
+
+// Breakpoints
+$medium-screen: em(640);
+$large-screen: em(860);
+
+.container {
+  @include container();
+}

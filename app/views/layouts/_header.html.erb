@@ -1,0 +1,25 @@
+<header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+    <a href="/" class="logo">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
+    </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-navigation-menu" class="navigation-menu show">
+        <li class="nav-link"><a href="javascript:void(0)">Dokument</a></li>
+        <li class="nav-link"><a href="javascript:void(0)">Nyheter</a></li>
+      </ul>
+    </nav>
+    <div class="navigation-tools">
+      <ul id="js-navigation-menu" class="navigation-menu">
+        <li class="nav-link more"><a href="javascript:void(0)"><%= current_user.email %></a>
+          <ul class="submenu">
+            <li><%= link_to "Systeminställningar", settings_users_path %></li>
+            <li><%= link_to "Kontoinställningar", edit_user_registration_path %></li>
+            <li> <%= link_to "Logga ut", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

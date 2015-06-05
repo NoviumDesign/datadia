@@ -1,0 +1,16 @@
+<%= render "settings/aside" %>
+
+<main>
+  <h1>Användare</h1>
+    <%= link_to 'Skapa ny användare', settings_users_new_path %>
+  <table>
+    <th>Användarnamn</th>
+    <th></th>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= link_to "Radera användare", admin_destroy_user_path(user), method: :delete, data: {confirm: "Sure?" } %></td>
+      </tr>
+    <% end %>
+  </table>
+</main>
